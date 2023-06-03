@@ -101,7 +101,7 @@ do {
         print()
 
         let tokens = Array(indices.map { tokensPerNarrator[$0] }.joined())
-        let markovChain = MarkovChain(tokens: tokens, order: 3)
+        let markovChain = MarkovChain(tokens: tokens, order: 2)
         let sentenceWords = markovChain.generate(
             sentenceCount: 8,
             minSentenceLength: 8,
