@@ -121,6 +121,3 @@ do {
 } catch {
     print("\(error)")
 }
-
-// let chapters
-//
