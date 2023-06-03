@@ -54,7 +54,8 @@ do {
             nFilesLoaded += 1
             let percent = Double(nFilesLoaded) / Double(totalNFiles)
             let percentString = formatPercent(percent)
-            print("Loading chapter data... \(percentString)")
+            print("Loading chapter data... \(percentString)", terminator: "\r")
+            fflush(stdout)
 
             return contents
         }.joined(separator: " ")
@@ -62,6 +63,7 @@ do {
         return Helper.tokenize(text: fullText)
     }
 
+    print()
     print()
     print("Enter the numbers of the narrators whose styles you wish to combine, separated by spaces.\n")
     var i = 1
